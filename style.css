@@ -1,0 +1,445 @@
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+/* -------- HEADER -------- */
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+/* Как правильно зафиксировать header? Чтобы он не уезжал? */
+
+.header-container {
+  /* height: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  fill: #000000;
+  width: 142px;
+  height: 12px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__list {
+  width: 500px;
+  display: flex;
+  justify-content: space-between
+}
+
+.menu__item,
+.menu__item a:visited {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.menu__item a:active {
+  color: red;
+  /* Тут нужно будет реализовать хитрое нижнее подчеркивание */
+}
+
+.menu__search {
+  width: 17px;
+  height: 16px;
+  margin-left: 84px;
+}
+
+
+/* -------- FIRST SCREEN -------- */
+
+.first-screen {
+  height: 600px;
+  background-image: url(img/bg-image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.first-screen-container {
+  padding-top: 100px;
+}
+
+.first-screen-container h1 {
+  width: 770px;
+}
+
+h1 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  color: #323232;
+}
+
+/* -------- BLOG -------- */
+
+.main-content__title {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.blog {
+  margin-top: 90px;
+}
+
+.article {
+  display: flex;
+  margin: 50px 0;
+  align-items: center;
+}
+
+.blog article:nth-child(3) {
+  flex-direction: row-reverse;
+}
+
+/* Вопрос: выше я выбирал nth-child(2), но сработало на первый article, обсудить как он считает, просто 2 торой ребенок, или article, который второй ребенок (при этом относительно всех детей он третий) */
+
+.article-img {
+  width: 570px;
+  height: 470px;
+}
+
+.article-info {
+  margin: 0 30px;
+}
+
+.article-tag,
+.article-date {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+
+.article-title {
+  width: 369px;
+  height: 70px;
+  margin: 30px 0 15px 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.article-desription {
+  width: 448px;
+  height: 51px;
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+.arrow {
+  width: 24px;
+  height: 12px;
+  fill: #7B7B7B;
+}
+
+/* -------- LATEST POSTS -------- */
+
+.latest-posts {
+  margin-top: 90px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h3 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.view-all a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.view-all a:hover p,
+.view-all a:hover .arrow,
+.view-all a:active p,
+.view-all a:active .arrow {
+  color: #000000;
+  fill: #000000;
+}
+
+.view-all p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+
+.list {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+/*  Ниже кривоватое решение, стоило как-то иначе делать? Может через backround? или так норм? */
+
+.latest-posts__list .post-img img {
+  width: 370px;
+  height: 260px;
+}
+
+.latest-posts__list .post-info {
+  width: 370px;
+}
+
+.post-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.post-tag,
+.post-date {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+
+.post-title {
+  margin-bottom: 20px;
+}
+
+.post-title h4 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.post-description {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+/* -------- MOST POPULAR -------- */
+
+.most-popular {
+  margin-top: 90px;
+}
+
+.most-popular__list .post-img img {
+  width: 570px;
+  height: 260px;
+}
+
+.most-popular__list .post-info {
+  width: 570px;
+}
+
+.load-more__button {
+  display: block;
+  margin: 50px auto;
+  width: 185px;
+  height: 46px;
+}
+
+.button {
+  background-color: #565656;
+}
+
+.button:hover {
+  background-color: #323232;
+}
+
+.button span {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 166.3%;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+/* -------- INFO -------- */
+
+.info {
+  margin-top: 90px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.info__left-box,
+.info__right-box {
+  width: 470px;
+}
+
+.info__left-box p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.info__left-box .arrow {
+  margin-top: 20px;
+}
+
+.info__right-box p {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 168%;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+
+/* -------- FOOTER -------- */
+
+.footer {
+  margin-top: 90px;
+  height: 300px;
+  background-color: #F4F4F4;
+}
+
+.footer__container {
+  padding-top: 70px;
+}
+
+.footer__wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.footer__question {
+  margin-bottom: 20px;
+}
+
+.footer__question p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 133%;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.footer__contacts a {
+  display: block;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.socials a {
+  display: block;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #565656;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  background-color: #565656;
+}
+
+.icon {
+  /*Как правильно исподьзовать SVG-спрайты, если не задавать размер он огромный 300*150px, и не выравнивается внутри бокса, а так все крывые. Или идти в спрайт и там рахмеры писать? Но тогда, они не будут из CSS */
+  fill: #565656;
+}
+
+.social-icon:hover .icon {
+  fill: #FFFFFF;
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer__copyright p {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-top: 20px;
+}

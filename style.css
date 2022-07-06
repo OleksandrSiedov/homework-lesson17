@@ -122,6 +122,7 @@ h1 {
 }
 
 .article-info {
+  width: 450px;
   margin: 0 30px;
 }
 
@@ -138,7 +139,7 @@ h1 {
 
 .article-title {
   width: 369px;
-  height: 70px;
+  /* height: 70px; */
   margin: 30px 0 15px 0;
   font-family: 'Red Hat Display', sans-serif;
   font-style: normal;
@@ -151,7 +152,7 @@ h1 {
 
 .article-desription {
   width: 448px;
-  height: 51px;
+  height: 81px;
   margin-top: 50px;
   font-family: 'Lato', sans-serif;
   font-style: normal;
@@ -371,6 +372,7 @@ h3 {
   justify-content: space-between;
 
 }
+
 .footer__question {
   margin-bottom: 20px;
 }
@@ -442,4 +444,142 @@ h3 {
   letter-spacing: 0.1em;
   color: #000000;
   margin-top: 20px;
+}
+
+/* ------------- ADAPTIVE ------------ */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 700px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  /*тут потом нужно будет написать, что меняем на бургер*/
+
+  .first-screen {
+    height: 320px;
+    background-image: url(img/bg-image-tablet.png);
+    /*тут стоит просто как-то картинку ужать, а не вставлять новую, верно?*/
+    /* background-position: center;
+    background-repeat: no-repeat; */
+  }
+
+  .first-screen-container {
+    padding-top: 30px;
+  }
+
+  .first-screen-container h1 {
+    width: 540px;
+  }
+
+  h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .blog {
+    margin-top: 70px;
+  }
+
+  .article-img {
+    width: 340px;
+    height: 280px;
+  }
+
+  .article-img img {
+    width: 340px;
+    height: 280px;
+  }
+
+  /*похоже на первом этапе проектирования как-то неправильно задал размеры, поэтому тут такая тавтология*/
+
+  .article-info {
+    width: 340px;
+  }
+
+  .article-desription {
+    width: 340px;
+    height: 80px;
+    overflow: hidden;
+    /* чтобы соответствовало макету, нужно было стрелку похоже выносить отдельным элементом и крепить к нижнему левому углу области поверх текста, но уже нет времени переделывать, практикуемся в адаптиве, а не этом тончилове */
+    margin-top: 40px;
+  }
+
+  .latest-posts__list {
+    flex-direction: column;
+    gap: 30px;
+    /* justify-content: space-between; */
+  }
+
+  .latest-posts__post {
+    display: flex;
+    gap: 20px;
+  }
+
+  .latest-posts__post:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .latest-posts__list .post-img img {
+    width: 340px;
+    height: 240px;
+  }
+
+  .latest-posts__list .post-info {
+    width: 340px;
+  }
+
+  .post-heading {
+    margin: 0 0 25px 0;
+  }
+
+  .most-popular__post .post-img img {
+    width: 340px;
+    height: 160px;
+  }
+
+  .most-popular__post .post-info {
+    width: 340px;
+  }
+
+  .info {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .info__right-box {
+    width: 700px;
+    align-self: flex-end;
+  }
+
+  .info__right-box p {
+    text-align: right;
+  }
+
+  .footer {
+    height: 410px ;  
+  }
+
+  .footer__wraper {
+    flex-direction: column;
+  }
+
+  .footer__text {
+    text-align: center;
+  }
+
+  .socials {
+    margin: 40px auto 0;
+  }
+
 }

@@ -1,0 +1,769 @@
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+/* -------- HEADER -------- */
+
+.header {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+/* Как правильно зафиксировать header? Чтобы он не уезжал? */
+
+.header-container {
+  /* height: 100px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  fill: #000000;
+  width: 142px;
+  height: 12px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__list {
+  width: 500px;
+  display: flex;
+  /* justify-content: space-between */
+  gap: 40px;
+}
+
+.menu__item,
+.menu__item a:visited {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #000000;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.menu__item a:hover {
+  color: green;
+  padding: 5px;
+  border: 1px dashed #000000;
+}
+
+.menu__item a:active {
+  color: red;
+  /* Тут нужно будет реализовать хитрое нижнее подчеркивание */
+}
+
+.menu__search {
+  width: 17px;
+  height: 16px;
+  margin-left: 84px;
+}
+
+.menu__burger {
+  margin-left: 40px;
+  display: none;
+}
+
+.menu__burger svg{
+  width: 34px;
+  height: 22px;
+}
+
+
+/* -------- FIRST SCREEN -------- */
+
+.first-screen {
+  height: 600px;
+  background-image: url(img/bg-image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.first-screen-container {
+  padding-top: 100px;
+}
+
+.first-screen-container h1 {
+  width: 770px;
+}
+
+.first-screen-container h1 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  color: #323232;
+}
+
+/* -------- BLOG -------- */
+
+.main-content__title {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 64px;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.blog {
+  margin-top: 90px;
+}
+
+.article {
+  display: flex;
+  margin: 50px 0;
+  align-items: center;
+}
+
+.blog article:nth-child(3) {
+  flex-direction: row-reverse;
+}
+
+/* Вопрос: выше я выбирал nth-child(2), но сработало на первый article, обсудить как он считает, просто 2 торой ребенок, или article, который второй ребенок (при этом относительно всех детей он третий) */
+
+.article-img {
+  width: 570px;
+  height: 470px;
+}
+
+.article-info {
+  width: 450px;
+  margin: 0 30px;
+}
+
+.article-tag,
+.article-date {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+
+.article-title {
+  width: 369px;
+  /* height: 70px; */
+  margin: 30px 0 15px 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.article-desription {
+  width: 448px;
+  height: 81px;
+  margin-top: 50px;
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+.read-more {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166.3%;
+  letter-spacing: 0.1em;
+  color: #000000;
+  display: none;
+}
+
+.arrow {
+  width: 24px;
+  height: 12px;
+  fill: #7B7B7B;
+}
+
+/* .read-more ~ .arrow:hover {
+  display: initial;
+  fill: red;
+} */
+
+/* -------- LATEST POSTS -------- */
+
+.latest-posts {
+  margin-top: 90px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h3 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.view-all a {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.view-all a:hover p,
+.view-all a:hover .arrow,
+.view-all a:active p,
+.view-all a:active .arrow {
+  color: #000000;
+  fill: #000000;
+}
+
+.view-all p {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+
+.list {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+/*  Ниже кривоватое решение, стоило как-то иначе делать? Может через backround? или так норм? */
+
+.latest-posts__list .post-img img {
+  width: 370px;
+  height: 260px;
+}
+
+.latest-posts__list .post-info {
+  width: 370px;
+}
+
+.post-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.post-tag,
+.post-date {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #7B7B7B;
+}
+
+.post-title {
+  margin-bottom: 20px;
+}
+
+.post-title h4 {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.post-description {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+/* -------- MOST POPULAR -------- */
+
+.most-popular {
+  margin-top: 90px;
+}
+
+.most-popular__list .post-img img {
+  width: 570px;
+  height: 260px;
+}
+
+.most-popular__list .post-info {
+  width: 570px;
+}
+
+.load-more__button {
+  display: block;
+  margin: 50px auto;
+  width: 185px;
+  height: 46px;
+}
+
+.button {
+  background-color: #565656;
+}
+
+.button:hover {
+  background-color: #323232;
+}
+
+.button span {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 166.3%;
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+}
+
+/* -------- INFO -------- */
+
+.info {
+  margin-top: 90px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.info__left-box,
+.info__right-box {
+  width: 470px;
+}
+
+.info__left-box p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.info__left-box .arrow {
+  margin-top: 20px;
+}
+
+.info__right-box p {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 168%;
+  letter-spacing: 0.05em;
+  color: #565656;
+}
+
+
+/* -------- FOOTER -------- */
+
+.footer {
+  margin-top: 90px;
+  height: 300px;
+  background-color: #F4F4F4;
+}
+
+.footer__container {
+  padding-top: 70px;
+}
+
+.footer__wraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.footer__question {
+  margin-bottom: 20px;
+}
+
+.footer__question p {
+  font-family: 'Red Hat Display', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 133%;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.footer__contacts a {
+  display: block;
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.socials a {
+  display: block;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #565656;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon:hover {
+  background-color: #565656;
+}
+
+.icon {
+  /*Как правильно исподьзовать SVG-спрайты, если не задавать размер он огромный 300*150px, и не выравнивается внутри бокса, а так все крывые. Или идти в спрайт и там рахмеры писать? Но тогда, они не будут из CSS */
+  fill: #565656;
+}
+
+.social-icon:hover .icon {
+  fill: #FFFFFF;
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer__copyright p {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 166%;
+  letter-spacing: 0.1em;
+  color: #000000;
+  margin-top: 20px;
+}
+
+/* ------------- ADAPTIVE ------------ */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 700px;
+  }
+
+  .header {
+    height: 60px;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .menu__burger {
+    display: initial;
+  }
+
+  /*тут потом нужно будет написать, что меняем на бургер*/
+
+  .first-screen {
+    height: 320px;
+    background-image: url(img/bg-image-tablet.png);
+    /*тут стоит просто как-то картинку ужать, а не вставлять новую, верно?*/
+    /* background-position: center;
+    background-repeat: no-repeat; */
+  }
+
+  .first-screen-container {
+    padding-top: 30px;
+  }
+
+  .first-screen-container h1 {
+    width: 540px;
+  }
+
+  .first-screen-container h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .blog {
+    margin-top: 70px;
+  }
+
+  .article-img {
+    width: 340px;
+    height: 280px;
+  }
+
+  .article-img img {
+    width: 340px;
+    height: 280px;
+  }
+
+  /*похоже на первом этапе проектирования как-то неправильно задал размеры, поэтому тут такая тавтология*/
+
+  .article-info {
+    width: 340px;
+  }
+
+  .article-desription {
+    width: 340px;
+    height: 80px;
+    overflow: hidden;
+    /* чтобы соответствовало макету, нужно было стрелку похоже выносить отдельным элементом и крепить к нижнему левому углу области поверх текста, но уже нет времени переделывать, практикуемся в адаптиве, а не этом тончилове */
+    margin-top: 40px;
+  }
+
+  .latest-posts__list {
+    flex-direction: column;
+    gap: 30px;
+    /* justify-content: space-between; */
+  }
+
+  .latest-posts__post {
+    display: flex;
+    gap: 20px;
+  }
+
+  .latest-posts__post:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+
+  .latest-posts__list .post-img img {
+    width: 340px;
+    height: 240px;
+  }
+
+  .latest-posts__list .post-info {
+    width: 340px;
+  }
+
+  .post-heading {
+    margin: 0 0 25px 0;
+  }
+
+  .most-popular__post .post-img img {
+    width: 340px;
+    height: 160px;
+  }
+
+  .most-popular__post .post-info {
+    width: 340px;
+  }
+
+  .info {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .info__right-box {
+    width: 700px;
+    align-self: flex-end;
+  }
+
+  .info__right-box p {
+    text-align: right;
+  }
+
+  .footer {
+    height: 410px;
+  }
+
+  .footer__wraper {
+    flex-direction: column;
+  }
+
+  .footer__text {
+    text-align: center;
+  }
+
+  .socials {
+    margin: 40px auto 0;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .container {
+    width: 300px;
+  }
+
+  .first-screen {
+    height: 500px;
+    background-image: url(img/bg-image-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .first-screen-container {
+    padding-top: 70px;
+  }
+
+  .first-screen-container h1 {
+    width: 300px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .article-img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .article-img img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .article-info {
+    width: 300px;
+  }
+
+  .article-title {
+    width: 300px;
+  }
+
+  .article-desription {
+    width: 300px;
+  }
+
+  .main-content__title {
+    text-align: center;
+  }
+
+  .main-content__article {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .blog article:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+
+  .latest-posts {
+    margin-top: 70px;
+  }
+
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    /* align-items: center;
+    justify-content: space-between; */
+  }
+
+  .latest-posts__post .post-img img {
+    width: 300px;
+    height: 210px;
+  }
+
+  .latest-posts__list .post-info {
+    width: 300px;
+  }
+
+  .latest-posts__post {
+    flex-direction: column;
+  }
+
+  .latest-posts__post:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .most-popular__list {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .most-popular__post .post-img img {
+    width: 300px;
+    height: 150px;
+  }
+
+  .most-popular__post .post-info {
+    width: 300px;
+    margin-top: 25px;
+  }
+
+  .info {
+    margin-top: 70px;
+    /* display: flex;
+    align-items: baseline;
+    justify-content: space-between; */
+  }
+
+  .info__left-box,
+  .info__right-box {
+    width: 300px;
+  }
+
+  /* .info__right-box {
+    width: 300px;
+    align-self: flex-start;
+  } */
+
+  .info__right-box p {
+    text-align: left;
+  }
+
+  .footer {
+    height: 420px;
+  }
+
+  .footer__container {
+    padding-top: 50px;
+  }
+
+  .footer__question p {
+    font-size: 32px;
+  }
+
+  .footer__contacts a {
+    font-size: 18px;
+  }
+
+  .footer__copyright p {
+    font-size: 16px;
+  }
+
+}

@@ -78,10 +78,10 @@
   width: 770px;
 }
 
-h1 {
+.first-screen-container h1 {
   font-family: 'Red Hat Display', sans-serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 48px;
   line-height: 64px;
   letter-spacing: 0.05em;
@@ -163,11 +163,27 @@ h1 {
   color: #565656;
 }
 
+.read-more {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 166.3%;
+  letter-spacing: 0.1em;
+  color: #000000;
+  display: none;
+}
+
 .arrow {
   width: 24px;
   height: 12px;
   fill: #7B7B7B;
 }
+
+/* .read-more ~ .arrow:hover {
+  display: initial;
+  fill: red;
+} */
 
 /* -------- LATEST POSTS -------- */
 
@@ -480,7 +496,7 @@ h3 {
     width: 540px;
   }
 
-  h1 {
+  .first-screen-container h1 {
     font-size: 36px;
     line-height: 50px;
   }
@@ -567,7 +583,7 @@ h3 {
   }
 
   .footer {
-    height: 410px ;  
+    height: 410px;
   }
 
   .footer__wraper {
@@ -580,6 +596,151 @@ h3 {
 
   .socials {
     margin: 40px auto 0;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .container {
+    width: 300px;
+  }
+
+  .first-screen {
+    height: 500px;
+    background-image: url(img/bg-image-mobile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .first-screen-container {
+    padding-top: 70px;
+  }
+
+  .first-screen-container h1 {
+    width: 300px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+  }
+
+  .article-img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .article-img img {
+    width: 300px;
+    height: 250px;
+  }
+
+  .article-info {
+    width: 300px;
+  }
+
+  .article-title {
+    width: 300px;
+  }
+
+  .article-desription {
+    width: 300px;
+  }
+
+  .main-content__title {
+    text-align: center;
+  }
+
+  .main-content__article {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .blog article:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+
+  .latest-posts {
+    margin-top: 70px;
+  }
+
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    /* align-items: center;
+    justify-content: space-between; */
+  }
+
+  .latest-posts__post .post-img img {
+    width: 300px;
+    height: 210px;
+  }
+
+  .latest-posts__list .post-info {
+    width: 300px;
+  }
+
+  .latest-posts__post {
+    flex-direction: column;
+  }
+
+  .latest-posts__post:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .most-popular__list {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .most-popular__post .post-img img {
+    width: 300px;
+    height: 150px;
+  }
+
+  .most-popular__post .post-info {
+    width: 300px;
+    margin-top: 25px;
+  }
+
+  .info {
+    margin-top: 70px;
+    /* display: flex;
+    align-items: baseline;
+    justify-content: space-between; */
+  }
+
+  .info__left-box,
+  .info__right-box {
+    width: 300px;
+  }
+
+  /* .info__right-box {
+    width: 300px;
+    align-self: flex-start;
+  } */
+
+  .info__right-box p {
+    text-align: left;
+  }
+
+  .footer {
+    height: 420px;
+  }
+
+  .footer__container {
+    padding-top: 50px;
+  }
+
+  .footer__question p {
+    font-size: 32px;
+  }
+
+  .footer__contacts a {
+    font-size: 18px;
+  }
+
+  .footer__copyright p {
+    font-size: 16px;
   }
 
 }

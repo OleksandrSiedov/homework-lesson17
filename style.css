@@ -34,7 +34,8 @@
 .menu__list {
   width: 500px;
   display: flex;
-  justify-content: space-between
+  /* justify-content: space-between */
+  gap: 40px;
 }
 
 .menu__item,
@@ -47,6 +48,14 @@
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #000000;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+.menu__item a:hover {
+  color: green;
+  padding: 5px;
+  border: 1px dashed #000000;
 }
 
 .menu__item a:active {
@@ -58,6 +67,16 @@
   width: 17px;
   height: 16px;
   margin-left: 84px;
+}
+
+.menu__burger {
+  margin-left: 40px;
+  display: none;
+}
+
+.menu__burger svg{
+  width: 34px;
+  height: 22px;
 }
 
 
@@ -474,8 +493,12 @@ h3 {
     height: 60px;
   }
 
-  .header__menu {
+  .menu__list {
     display: none;
+  }
+
+  .menu__burger {
+    display: initial;
   }
 
   /*тут потом нужно будет написать, что меняем на бургер*/
